@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en" class="js-focus-visible" xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+	  xmlns:th="http://www.thymeleaf.org"
+	  layout:decorate="~{fragments/layout}">
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta http-equiv="cache-control" content="no-cache">
+		<meta http-equiv="pragma" content="no-cache">
+		<meta http-equiv="expires" content="0">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<meta name="description" content="Smart Factory">
+		<meta name="author" content="FII - Icarus">
+		<title>Smart Factory</title>
+		<meta name="keywords" content="Clear login Form a Responsive Web Template, Bootstrap Web Templates, Flat Web Templates, Android Compatible Web Template, Smartphone Compatible Web Template, Free Webdesigns for Nokia, Samsung, LG, Sony Ericsson, Motorola Web Design">
+		<link rel="stylesheet" type="text/css" th:href="@{/assets/css/icons/fontawesome/styles.min.css}" >
+		<link rel="stylesheet" type="text/css" th:href="@{/assets/css/bootstrap.css}" >
+		<link rel="stylesheet" type="text/css" th:href="@{/assets/css/core.css}">
+		<link rel="stylesheet" type="text/css" th:href="@{/assets/css/components.css}">
+		<link rel="stylesheet" type="text/css" th:href="@{/assets/css/colors.css}">
+		<link rel="stylesheet" type="text/css" th:href="@{assets/css/icons/icomoon/styles.css}">
+		<!-- <link rel="stylesheet" type="text/css" th:href="@{assets/css/icons/fontawesome/styles.min.css}"> -->
+
+		<script type="text/javascript" th:src="@{/assets/js/core/libraries/jquery.min.js}"></script>
+		<script type="text/javascript" th:src="@{/assets/js/core/libraries/bootstrap.min.js}"></script>
+		<script type="text/javascript" th:src="@{/assets/js/plugins/forms/selects/bootstrap_select.min.js}"></script>
+		<!-- <script type="text/javascript" th:src="@{/assets/js/custom/picker_date.js}"></script> -->
+		<!--//fonts-->
+    	<link rel="icon" type="image/ico" th:href="@{/favicon.ico}" >
+		<link id="codefund-style" rel="stylesheet" media="all" th:href="@{/assets/css/custom/code_fund_ad-781ed628.css}">
+		<link th:href="@{/assets/css/custom/stylelogin.css}" rel="stylesheet" type="text/css">
+	</head>
+
+	<body>
+		<div id="loader"></div>
+		<div id="codefund"></div>
+		<div id="wrapper">
+			<header>
+				<meta name="robots" content="noindex">
+				<h1 th:text="#{login.smartfactory}"></h1>
+			</header>
+			<div id="content">
+				<div class="w3ls-login box box--big class-register-form" style="padding-top: 10px;">
+					<!-- form starts here -->
+					<form id="register-form"  th:action="@{/user/sign-up}" method="post">
+						<h4 class="changePass-title" th:text="#{signUp.title}"></h4>
+						<div class="agile-field-txt">
+							<label>
+								<i class="fa fa-user" aria-hidden="true"></i><span th:text="#{signUp.name}"></span></label>
+							<input type="text" value="" name="username" id="newName" placeholder="Enter your name" required="">
+						</div>
+						<div class="agile-field-txt">
+							<label>
+								<i class="fa fa-envelope" aria-hidden="true"></i> <span th:text="#{signUp.email}"></span></label>
+							<input type="text" name="email" id="newEmail" placeholder="Enter your email">
+						</div>
+						<div class="agile-field-txt">
+							<label>
+								<i class="fa fa-key" aria-hidden="true"></i><span th:text="#{signUp.password}"></span></label>
+							<input type="password" name="password" id="newPassword" placeholder="Enter your Password" required="">
+							<div class="agile_label">
+								<input id="check" name="check" type="checkbox" value="show password" onclick="myFunction()">
+								<label class="check" for="check"> <span th:text="#{signUp.showPass}"></span></label>
+							</div>
+						</div>
+						<!-- script for show password -->
+						<script>
+							function myFunction() {
+								var x = document.getElementById("newPassword");
+								if (x.type === "password") {
+									x.type = "text";
+								} else {
+									x.type = "password";
+								}
+							}
+						</script>
+						<!-- //script ends here -->
+						<div class="w3ls-bot">
+							<div class="form-end">
+								<button type="submit" class="submitButton btn-primary" id="btnRegister" value="Sign Up" th:text='#{register.button}' style="margin-top: 0;margin-bottom: 8px;" onclick="register()"></button>
+							</div>
+							<div class="clearfix"></div>
+							<script>
+								function register() {
+									if ($('#newName').val() != '' && $('#newPassword').val() != '' ) {
+										alert('Create account success. Please wait admin add account!!');
+									} else {
+										alert('Sorry, Please enter full infomation!!');
+									}
+								}
+							</script>
+						</div>
+					</form>
+				</div>
+			</div>
+			<footer>
+				<p class="copyright-agileinfo">© 2018. <a th:href="@{#}" target="_blank">FII </a>by
+					<a th:href="@{#}" target="_blank">Software Team </a>cpe-vn-fii-sw@mail.foxconn.com
+				</p>
+			</footer>
+		</div>
+		<script type="text/javascript" th:src="@{/assets/js/core/libraries/jquery.min.js}"></script>
+		<script type="text/javascript" th:src="@{/assets/js/core/libraries/bootstrap.min.js}"></script>
+	</body><loom-container id="lo-engage-ext-container"><div></div><loom-shadow classname="resolved"></loom-shadow></loom-container>
+</html>
+<script>
+	$(window).load(function() {
+		$('#register-form').submit(function(e){
+			document.getElementById('loader').style.display='block';
+			setTimeout(function(){
+				document.getElementById('loader').style.display='none';
+			},30000);
+		});
+	});
+</script>

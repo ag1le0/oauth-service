@@ -1,0 +1,8 @@
+
+/*--reset--*/
+/*--end reset--*/
+body {
+    background: url(../../images/backinfo.png)no-repeat;
+    object-fit: cover;
+    background-size: cover;
+}

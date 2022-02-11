@@ -1,0 +1,89 @@
+.style-form{
+    background-color: #f3f3f3;
+    border-radius: 3px;
+    box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.12), 0 3px 4px rgba(0, 0, 0, 0.24);
+  }
+  .table thead tr th{
+    background-color: #003c9d;
+    color: #fff;
+    padding: 5px 10px;
+  }
+  .table tbody tr td{
+    background-color: #f3f3f3;
+  }
+  .height-style-form{
+    min-height: 622px;
+  }
+  .style-form h2{
+    border-bottom: 1px solid #ccc;
+    font-size: 18px;
+    font-weight: bold;
+    padding: 3px 3px 3px 5px;
+  }
+  .style-form form{
+    padding: 0 10px 5px 10px;
+  }
+  #title-header{
+    text-align: center;
+    margin: 0;
+    color: #fff;
+  }
+  .form-control{
+    background: #fff;
+    border-radius: 3px;
+    height: 30px;
+    padding-left: 5px;
+    border: 1px solid #ccc !important;
+  }
+  .bootstrap-select.btn-group .btn-default .caret {
+    right: 5px;
+  }
+  .bootstrap-select .btn-default{
+    padding: 3px 3px;
+    border-bottom-color: transparent !important;
+  }
+  .form-control:focus {
+      border-color: #ccc !important;
+  }
+  .bootstrap-select.form-control{
+    border: 1;
+  }
+  .bootstrap-select .btn-default {
+    padding: 3px 3px;
+    border-bottom-color: #0078d7;
+  }
+  .form-control[disabled] {
+    border-bottom-style: double;
+    background: #eaeaea;
+    color: #999999;
+  }
+  .btnEditStyle{
+    color: #ffc41b;
+    padding: 2px 5px;
+    margin-right: 5px;
+  }
+  .btnEditStyle:hover{
+    color: #f59a24;
+    transform: translateY(-1px);
+  }
+  .btnDeleteStyle{
+    color: #e35232;
+    padding: 2px 7px;
+    /* margin-right: 5px; */
+  }
+  .btnDeleteStyle:hover{
+    color: #F44336;
+    transform: translateY(-1px);
+  }
+  .btnEditStyle.btn:focus, .btnEditStyle.btn.focus {
+    color: #ffc41b;
+  }
+  .btnDeleteStyle.btn:focus, .btnDeleteStyle.btn.focus {
+    color: #F44336;
+  }
+  .style-tab-form{
+    min-height: 210px;
+  }
+  .title-content label{
+    font-weight: 500;
+  }

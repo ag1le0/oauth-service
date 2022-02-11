@@ -1,0 +1,387 @@
+<!DOCTYPE html>
+<html lang="en" class="js-focus-visible" xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+      xmlns:th="http://www.thymeleaf.org" layout:decorate="~{fragments/layout}">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta http-equiv="cache-control" content="no-cache">
+    <meta http-equiv="pragma" content="no-cache">
+    <meta http-equiv="expires" content="0">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Smart Factory">
+    <meta name="author" content="FII - Icarus">
+    <title>Infomation User</title>
+    <meta name="keywords"
+          content="Clear login Form a Responsive Web Template, Bootstrap Web Templates, Flat Web Templates, Android Compatible Web Template, Smartphone Compatible Web Template, Free Webdesigns for Nokia, Samsung, LG, Sony Ericsson, Motorola Web Design">
+    <link th:href="@{/assets/css/icons/fontawesome/styles.min.css}" rel="stylesheet">
+    <link th:href="@{/assets/css/custom/style-user-manager.css}" rel="stylesheet" type="text/css">
+    <link th:href="@{/assets/css/icons/fontawesome/styles.min.css}" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" th:href="@{/assets/css/bootstrap.css}">
+    <!-- <link id="codefund-style" rel="stylesheet" media="all" th:href="@{/assets/css/custom/code_fund_ad-781ed628.css}"> -->
+    <link rel="stylesheet" type="text/css" th:href="@{/assets/js/plugins/paginationTable/simplePagination.css}">
+    <link rel="stylesheet" type="text/css" th:href="@{/assets/css/plugins/datatables/datatables.min.css}">
+    <link rel="stylesheet" type="text/css" th:href="@{/assets/css/custom/css-profile.css}">
+    <link rel="stylesheet" type="text/css" th:href="@{/assets/css/custom/cssImagebody.css}">
+
+    <!--//fonts-->
+    <link rel="icon" type="image/ico" th:href="@{/assets/images/logoFavicon.png}">
+    <script type="text/javascript" th:src="@{/assets/js/core/libraries/jquery.min.js}"></script>
+    <script type="text/javascript" th:src="@{/assets/js/core/libraries/bootstrap.min.js}"></script>
+    <script type="text/javascript" th:src="@{/assets/js/plugins/paginationTable/jquery.simplePagination.js}"></script>
+    <script type="text/javascript" th:src="@{/assets/js/plugins/tables/datatables/datatables.min.js}"></script>
+</head>
+<style>
+  .style-form h3 {
+    border-bottom: 1px solid #ccc;
+    font-size: 17px;
+    font-weight: bold;
+    padding: 3px 3px 3px 5px;
+  }
+  .style-horizontal-div {
+    padding-left: 7px;
+    padding-right: 7px;
+    padding-bottom: 1px;
+  }
+  .btn-add-line {
+    font-size: 12px;
+    padding: 6px 10px;
+    background: #003c9d;
+    color: #fff;
+    width: 100%;
+    text-transform: capitalize;
+  }
+  .btn-add-line:hover {
+    color: #ccc;
+  }
+  .styleDisabled {
+    pointer-events: none;
+    cursor: default;
+    color: #aba2a2;
+  }
+  .table-sticky thead th {
+    position: -webkit-sticky;
+    position: sticky;
+    top: -1px;
+    padding: 3px 3px;
+  }
+  .table-sticky tbody td {
+    padding: 3px 3px;
+  }
+  .style-tab-form {
+    min-height: 250px;
+  }
+  .style-height-form {
+    min-height: 438px;
+  }
+  .height-style-form {
+    min-height: 250px;
+  }
+  .inputDetailEQN .dropdown-menu{
+    max-height: 195px !important;
+  }
+  .text-header{
+    text-shadow: 5px 5px 5px rgba(0, 0, 0, 0.12), 0 3px 4px rgba(0, 0, 0, 0.24);
+    color: #fff;
+  }
+  .btn-save-edit{
+    background-color: #dc3545;
+    text-transform: inherit;
+    letter-spacing: 1px;
+    padding: 4px 8px;
+    color: #f3f3f3;
+    border-radius: 3px;
+    box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.12), 0 3px 4px rgba(0, 0, 0, 0.24);
+  }
+  .btn-save-edit:hover{
+    color: #ccc;
+  }
+  .btn-change-pass{
+    background-color: #009688;
+    text-transform: inherit;
+    letter-spacing: 1px;
+    padding: 4px 8px;
+    color: #f3f3f3;
+    margin-right: 10px;
+    border-radius: 3px;
+    box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.12), 0 3px 4px rgba(0, 0, 0, 0.24);
+  }
+  .btn-change-pass:hover{
+    color: #ccc;
+  }
+  .class-titleSetting{
+    padding: 4px 8px;
+    text-transform: inherit;
+    letter-spacing: 0.5px;
+  }
+  .class-title-td-1{
+    font-weight: 600;
+  }
+  .form-group label{
+      text-align: left !important;
+  }
+</style>
+<body>
+<div class="row" style="margin: unset;">
+  <div class="col-lg-12" style="padding:0px;">
+    <!-- order code -->
+    <div class="col-md-12 style-display-order no-margin">
+      <div class="col-md-4 style-select-orderCode" style="padding-left: 10px; padding-right: 10px;padding-top: 10px;">
+        <div class="row no-margin">
+          <div class="form-group ">
+            <label class="col-md-5 col-form-label text-bold text-header" style="font-size: 18px;">
+              <spring:message th:text="#{profile.title}" />
+            </label>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-8"></div>
+    </div>
+    <!-- order code -->
+    <!-- infomation row -->
+    <div class="col-md-12 no-margin">
+        <div class="col-md-4">
+            <div class="list-form">
+                <div class="style-form style-height-form">
+                    <div class="form-horizontal style-horizontal-div" style="margin-top: 5px;">
+                        <div class="table-style-total">
+                            <table id="tableTotalShow" class="table">
+                            <tbody>
+                                <tr style="text-align: center;">
+                                    <td colspan = "2" class="avatar-img" style="padding: 0;padding-top: 5px;">
+                                        <!-- <spring:message code="home.contentTotal" /> -->
+                                        <img rel="icon" type="image/ico" th:src="@{/assets/images/avatarprofile.jpg}" style="width:140px;height:140px;object-fit: cover;">
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td colspan="2" style="border-top: none;text-align: center;padding: 3px;">
+                                        <!-- <spring:message code="home.contentEQNInOK" /> -->
+                                        <span style="font-weight: 700;" id="idNameAvatar"></span>
+                                        <span style="font-weight: 700;" id="idNameChinese"></span><br />
+                                        <span id="idDepartment"></span>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="class-title-td-1 class-td-idCard">
+                                        <spring:message th:text="#{profile.idCard}" />
+                                    </td>
+                                    <td id="idTDCard">
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="class-title-td-1 class-td-fullname">
+                                      <spring:message th:text="#{profile.fullName}" />
+                                    </td>
+                                    <td id="idTDFullName">
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="class-title-td-1 class-td-department">
+                                      <spring:message th:text="#{profile.depart}" />
+                                    </td>
+                                    <td id="idTDDepartment">
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="class-title-td-1 class-td-email">
+                                      <spring:message th:text="#{profile.email}" />
+                                    </td>
+                                    <td id="idTDEmail">
+                                    </td>
+                                </tr>
+                                <tr>
+                                  <td class="class-title-td-1 class-td-phone">
+                                    <spring:message th:text="#{profile.level}" />
+                                    <!-- Level -->
+                                  </td>
+                                  <td id="idLevel">
+                                  </td>
+                                </tr>
+                                <!-- <tr>
+                                  <td class="class-title-td-1 class-td-phone">
+                                    <spring:message th:text="#{profile.phone}" />
+                                  </td>
+                                  <td id="idTDPhone">
+                                  </td>
+                                </tr> -->
+                            </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-8">
+            <!-- form3 -->
+            <form id="edit-user-form" th:action="@{/user/update-information}" method="post">
+                <div class="list-form">
+                <div class="style-form style-height-form" style="background: #eaeaea;">
+                    <h3 style="margin-top: 5px;">
+                    <a class="btn btn-primary class-titleSetting">
+                        <spring:message th:text="#{profile.titleSetting}" />
+                    </a>
+                    </h3>
+                    <div class="form-horizontal style-horizontal-div">
+                    <div class="row no-margin" style="padding-left: 20px;padding-right: 20px;">
+                        <div class="form-group">
+                        <label class="col-xs-3 control-label text-bold" style="padding-top: 8px;">
+                            <spring:message th:text="#{profile.idCard}" />
+                        </label>
+                        <div class="col-xs-9">
+                            <input type="text" id="changeName" class="form-control" disabled placeholder="">
+                        </div>
+                        </div>
+                        <div class="form-group">
+                        <label class="col-xs-3 control-label text-bold" style="padding-top: 8px;">
+                            <spring:message th:text="#{profile.fullName}" />
+                        </label>
+                        <div class="col-xs-9">
+                            <input type="text" id="changeFullName" class="form-control" placeholder="">
+                            <input type="hidden" disabled id="idUserNotChange" class="form-control">
+                        </div>
+                        </div>
+                        <div class="form-group">
+                        <label class="col-xs-3 control-label text-bold" style="padding-top: 8px;">
+                            <spring:message th:text="#{profile.chineseName}" />
+                        </label>
+                        <div class="col-xs-9">
+                            <input type="text" id="changeChineseName" class="form-control" placeholder="">
+                        </div>
+                        </div>
+                        <div class="form-group">
+                        <label class="col-xs-3 control-label text-bold" style="padding-top: 8px;">
+                            <spring:message th:text="#{profile.depart}" />
+                        </label>
+                        <div class="col-xs-9">
+                            <input type="text" id="changeDepart" class="form-control" placeholder="">
+                        </div>
+                        </div>
+                        <div class="form-group">
+                        <label class="col-xs-3 control-label text-bold" style="padding-top: 8px;">
+                            <spring:message th:text="#{profile.email}" />
+                        </label>
+                        <div class="col-xs-9">
+                            <input type="text" id="changeEmail" class="form-control" placeholder="">
+                        </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="col-xs-3 control-label text-bold" style="padding-top: 8px;">
+                                <spring:message th:text="#{profile.level}" />
+                                <!-- Level -->
+                            </label>
+                            <div class="col-xs-9">
+                                <input type="text" id="changeLevel" class="form-control" placeholder="">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row no-margin" style="float: right;padding-right: 20px;">
+                        <a class="btn btn-sm btn-change-pass" th:href="@{change-password}">
+                          <spring:message th:text="#{profile.changePassword}" />
+                        </a>
+                        <a class="btn btn-sm btn-save-edit" onclick="editInfo();">
+                            <spring:message th:text="#{profile.save}" />
+                        </a>
+                    </div>
+                    </div>
+                </div>
+                </div>
+            </form>
+            <!-- form3 -->
+        </div>
+    </div>
+    <!-- infomation row -->
+  </div>
+</div>
+</body>
+<script>
+    loadDataInfo();
+    function loadDataInfo(){
+        $.ajax({
+            type: "GET",
+            url: "/oauth-service/user/information",
+            data: {
+            //   idUser: userID,
+            },
+            contentType: "application/json; charset=utf-8",
+            success: function (resultData) {
+            var data = resultData.result;
+            if (!$.isEmptyObject(data)) {
+            var valueFullName = data.name == null ?'' : data.name;
+            var valueNameChinese = data.chineseName == '' ? '' : " ( "+data.chineseName+" )";
+            var valueDepartment = data.department == null ? '' : data.department;
+            var valueCard = data.username == null ? '' : data.username;
+            var valueEmail = data.email == null ? '' : data.email;
+            var avatar = data.avatar == null ? '' : data.avatar;
+            var level = data.level == null ? '' : data.level;
+            // var valuePhone = data.phoneNumber == null ? '' : data.phoneNumber;
+            // var checkAvatar = '<img rel="icon" type="image/ico" th:src="@{'+avatar+'}" />';
+                // $('.avatar-img').html(checkAvatar);
+                $('#idNameAvatar').html(valueFullName);
+                $('#idNameChinese').html(valueNameChinese);
+                $('#idDepartment').html(valueDepartment);
+                $('#idTDCard').html(valueCard);
+                $('#idTDFullName').html(valueFullName);
+                $('#idTDDepartment').html(valueDepartment);
+                $('#idTDEmail').html(valueEmail);
+                // $('#idTDPhone').html(valuePhone);
+                $('#idLevel').html(level);
+                //edit
+                $('#changeName').val(valueCard);
+                $('#idUserNotChange').val(data.id);
+                $('#changeFullName').val(valueFullName);
+                $('#changeChineseName').val(data.chineseName);
+                $('#changeDepart').val(valueDepartment);
+                $('#changeEmail').val(valueEmail);
+                // $('#changePhone').val(valuePhone);
+                $('#changeLevel').val(level);
+            } else {
+                $('#tableTotalShow>tbody').html('<tr><td colspan="6" align="center"><spring:message code="inputNew.tableNoData" /></td></tr>');
+            }
+            },
+            failure: function (errMsg) {
+            console.log(errMsg);
+            }
+        });
+    }
+    function editInfo() {
+      if ($("#changeFullName").val() != '' && $("#changeDepart").val() != '' && $("#changeName").val() != '') {
+        var token = $('#edit-user-form').find('input[name="_csrf"]').val();
+        var arr = {
+            username: $("#changeName").val(),
+            name: $("#changeFullName").val(),
+            chineseName: $("#changeChineseName").val(),
+            email: $("#changeEmail").val(),
+            // bu: $("#changeFullName").val(),
+            // cft: $("#changeFullName").val(),
+            // factory: $("#changeFullName").val(),
+            department: $("#changeDepart").val(),
+            // title: $("#changeFullName").val(),
+            level: $("#changeLevel").val()
+        }
+        $.ajax({
+            type: "POST",
+            url: "/oauth-service/user/update-information",
+            data: JSON.stringify(arr),
+            contentType: "application/json; charset=utf-8",
+            beforeSend: function (xhr) {
+                busy = true;
+                xhr.setRequestHeader('X-CSRF-TOKEN', token);
+            },
+            success: function (resultData) {
+                // var resultObj = JSON.parse(resultData);
+                if (resultData.result) {
+                    alert(resultData.message);
+                    loadDataInfo();
+                } else {
+                    alert(resultData.message);
+                }
+            },
+            failure: function (errMsg) {
+                console.log(errMsg);
+            }
+        });
+      } else {
+        alert("Please input full information to save!!");
+      }
+    }
+</script>

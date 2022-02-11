@@ -1,0 +1,78 @@
+# port
+server:
+  http.port: 8686
+  port: 18686
+  domain: https://10.224.81.70:6443/oauth-service/
+  servlet:
+    context-path: /oauth-service
+    session:
+      timeout: 360m
+  ssl:
+    key-store: D:\tiennd\app\apache24\conf\ssl\fiisw_cnsbg_efoxconn_com.pfx
+    key-store-password: Foxconn168!!
+    key-store-type: PKCS12
+    enabled: true
+
+# db
+spring:
+  jackson:
+    time-zone: Asia/Ho_Chi_Minh
+    date-format: yyyy/MM/dd HH:mm:ss
+  datasource:
+#    url: jdbc:sqlserver://10.224.81.70:3000;databaseName=oauth
+#    username: 8170sql
+#    password: Foxconn123
+    url: jdbc:sqlserver://10.224.81.145:3000;databaseName=oauth
+    username: fii
+    password: Foxconn168!!
+    configuration:
+      connectionTimeout: 30000
+      idleTimeout: 30000
+      maxLifetime: 60000
+  jpa:
+    show-sql: true
+    properties.hibernate.dialect: org.hibernate.dialect.SQLServer2008Dialect
+  thymeleaf:
+    template-loader-path: classpath:/templates
+    suffix: .html
+    cache: false
+  jmx:
+    default-domain: oauth
+  rabbitmq:
+    host: 10.224.81.142
+    port: 5672
+    username: rabbitmq
+    password: Foxconn168!!
+  servlet:
+    multipart:
+      location: D:/tiennd/data/project/oauth-service/
+      enabled: true
+      max-file-size: 16MB
+      max-request-size: 32MB
+
+security:
+  jwt:
+    key-store: classpath:oauth.jks
+    key-store-password: Foxconn168!!
+    key-pair-alias: oauth
+    key-pair-password: Foxconn168!!
+  basic:
+    enabled: false
+  recognize:
+    url: http://10.224.40.111:8866/recognize
+
+# uploading
+path:
+  data: D:/fii/data/project/oauth/
+
+# logging
+logging:
+  path: logs/oauth-service
+  level:
+    #    root: DEBUG
+    com.foxconn.fii: DEBUG
+#    org.springframework.web: DEBUG
+    org.springframework.web.client.RestTemplate: DEBUG
+#    org.hibernate.SQL: DEBUG
+#    org.springframework.security: DEBUG
+#    org.springframework.jdbc.core.JdbcTemplate: DEBUG

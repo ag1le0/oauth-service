@@ -1,0 +1,324 @@
+/*圓體*/
+
+html,
+body {
+    margin: 0 auto;
+    text-align: center;
+    width: 100%;
+    min-width: 270px;
+    height: 100%;
+    min-height: 550px;
+    background: #000;
+}
+
+.btn-group-vertical>.btn-group:after,
+.btn-group-vertical>.btn-group:before,
+.btn-toolbar:after,
+.btn-toolbar:before,
+.clearfix:after,
+.clearfix:before,
+.container-fluid:after,
+.container-fluid:before,
+.container:after,
+.container:before,
+.dl-horizontal dd:after,
+.dl-horizontal dd:before,
+.form-horizontal .form-group:after,
+.form-horizontal .form-group:before,
+.modal-footer:after,
+.modal-footer:before,
+.modal-header:after,
+.modal-header:before,
+.nav:after,
+.nav:before,
+.navbar-collapse:after,
+.navbar-collapse:before,
+.navbar-header:after,
+.navbar-header:before,
+.navbar:after,
+.navbar:before,
+.pager:after,
+.pager:before,
+.panel-body:after,
+.panel-body:before,
+.row:after,
+.row:before {
+    display: table;
+    content: " ";
+}
+
+.form-horizontal .form-group {
+    margin-right: 0px;
+    margin-left: -15px;
+}
+
+.container {
+    width: 100%;
+    height: 100%;
+    padding: 0px;
+}
+
+.container img.bk {
+    position: absolute;
+    left: 0px;
+    width: 100%;
+    height: 100%;
+}
+
+#header {
+    margin: 0;
+    font-weight: normal;
+    color: rgb(222, 112, 112);
+    text-shadow: 0 2px 0 #111;
+    white-space: nowrap;
+    font-size: 50px;
+    padding-bottom: 45px;
+}
+
+.text {
+    color: #ffffff;
+    position: absolute;
+}
+
+.sh {
+    color: #333;
+    text-shadow: 1px 1px 5px #333;
+    filter: progid:DXImageTransform.Microsoft.MotionBlur(strength=5, direction=145);
+    *zoom: 1;
+}
+
+#app-link {
+    position: absolute;
+    right: 10px;
+    bottom: 0px;
+    width: 80px;
+    height: 125px;
+    cursor: pointer;
+    background: url(/auth/assets/images/custom/login/phone.png) no-repeat;
+}
+
+.comic {
+    font-family: "Comic Sans MS", cursive;
+    display: none;
+    color: #fff;
+    background-color: #000;
+    border: 2px solid #fff;
+    -moz-border-radius: 15px;
+    /* Firefox */
+    -webkit-border-radius: 15px;
+    /* Safari and Chrome */
+    border-radius: 15px;
+    /* Opera 10.5+, future browsers, and now also Internet Explorer 6+ using IE-CSS3 */
+    -moz-box-shadow: 5px 5px 5px rgba(0, 0, 0, .5);
+    /* Firefox */
+    -webkit-box-shadow: 5px 5px 5px rgba(0, 0, 0, .5);
+    /* Safari and Chrome */
+    box-shadow: 5px 5px 5px rgba(0, 0, 0, .5);
+    /* Opera 10.5+, future browsers and IE6+ using IE-CSS3 */
+    padding: 20px;
+    position: absolute;
+    left: -65px;
+    top: -95px;
+}
+
+.comic:after {
+    content: "";
+    display: block;
+    background-color: #000;
+    border: 2px solid #fff;
+    border-width: 0 2px 2px 0;
+    width: 24px;
+    height: 24px;
+    box-shadow: 5px 0 5px rgba(0, 0, 0, .5);
+    position: absolute;
+    bottom: -13px;
+    left: 85px;
+    -webkit-transform: rotate(45deg);
+    -moz-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    -o-transform: rotate(45deg);
+}
+
+.modal {
+    position: absolute;
+}
+
+.modal img {
+    width: 80%;
+}
+
+.modal button.close {
+    cursor: pointer;
+    width: 25px;
+    height: 25px;
+    position: absolute;
+    top: 15px;
+    right: 15px;
+}
+
+
+/* QR Code */
+
+#qrcode {
+    position: absolute;
+    right: 10px;
+    width: 120px;
+    display: none;
+}
+
+#qrcode img {
+    width: 120px;
+    height: 120px;
+}
+
+#qrcode label {
+    color: #ccc;
+}
+
+
+/* Login Container */
+
+.login-container {
+    text-align: center;
+    margin: 0 auto;
+    height: 100%;
+    width: 380px;
+}
+
+.login-container img.bk2 {
+    position: absolute;
+    width: 380px;
+    min-height: 100%;
+    display: block;
+}
+
+#login-form {
+    background-color: rgba(0, 0, 0, 0.3);
+    padding: 10px 10px;
+    border-radius: 15px;
+    opacity: 0.9;
+}
+
+#login-wrapper {
+    margin: 0 auto;
+    padding: 25px 30px 20px 30px;
+    position: relative;
+    text-align: center;
+    text-shadow: 0 1px 0 #000;
+    width: 380px;
+    height: 100%;
+    background-color: rgba(85, 85, 85, 0.3);
+}
+
+#login-wrapper a {
+    color: #fff;
+}
+
+#login-wrapper a:hover {
+    color: #ccc;
+    text-decoration: none;
+}
+
+#login-wrapper .user-header {
+    text-align: center;
+    margin: 0 auto;
+    padding-bottom: 25px;
+}
+
+#login-wrapper .user-header img {
+    width: 130px;
+    opacity: 0.8;
+}
+
+#login-wrapper form select {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    cursor: pointer;
+}
+
+#login-wrapper form input,
+#login-wrapper form select {
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    -ms-border-radius: 3px;
+    -o-border-radius: 3px;
+    border-radius: 3px;
+    -webkit-box-shadow: 0 1px 0 #fff, 0 -2px 5px rgba(0, 0, 0, 0.08) inset;
+    -moz-box-shadow: 0 1px 0 #fff, 0 -2px 5px rgba(0, 0, 0, 0.08) inset;
+    -ms-box-shadow: 0 1px 0 #fff, 0 -2px 5px rgba(0, 0, 0, 0.08) inset;
+    -o-box-shadow: 0 1px 0 #fff, 0 -2px 5px rgba(0, 0, 0, 0.08) inset;
+    box-shadow: 0 1px 0 #fff, 0 -2px 5px rgba(0, 0, 0, 0.08) inset;
+    -webkit-transition: all 0.5s ease;
+    -moz-transition: all 0.5s ease;
+    -ms-transition: all 0.5s ease;
+    -o-transition: all 0.5s ease;
+    transition: all 0.5s ease;
+    background: #eae7e7 url(/auth/assets/images/custom/login/icon-new.png) no-repeat;
+    border: 1px solid #c8c8c8;
+    color: #777;
+    font: 18px Helvetica, Arial, sans-serif;
+    margin: 0 0 10px;
+    padding: 10px 10px 10px 40px;
+    width: 100%;
+    height: 46px;
+}
+
+#inputUser {
+    background-position: 5px 12px !important;
+}
+
+#inputPassword {
+    background-position: 5px -53px !important;
+}
+
+#Org {
+    background-position: 5px -116px !important;
+}
+
+#Language {
+    background-position: 5px -177px !important;
+}
+
+.submitButton {
+    background: rgb(254, 231, 154);
+    -webkit-border-radius: 30px;
+    -moz-border-radius: 30px;
+    -ms-border-radius: 30px;
+    -o-border-radius: 30px;
+    border-radius: 30px;
+    border: 1px solid #D69E31;
+    color: #85592e;
+    cursor: pointer;
+    text-align: center;
+    font: bold 15px Helvetica, Arial, sans-serif;
+    height: 35px;
+    position: relative;
+    width: 120px;
+}
+
+
+#login-wrapper .submit-area {
+    margin-top: 30px;
+}
+
+#login-wrapper .submit-area #submit-tool {
+    margin-top: 10px;
+}
+
+.icon-area {
+    display: inline;
+}
+
+.tab-content {
+    text-align: center;
+    margin: 0 auto;
+}
+
+#pwdModal .tab-content {
+    margin-top: 20px;
+}
+
+#pwdModal .comment {
+    margin-bottom: 15px;
+    font-weight: bold;
+}

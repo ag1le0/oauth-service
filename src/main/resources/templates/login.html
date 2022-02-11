@@ -1,0 +1,625 @@
+<!DOCTYPE html>
+<html lang="en" class="js-focus-visible" xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout" xmlns:th="http://www.thymeleaf.org" layout:decorate="~{fragments/layout}">
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta http-equiv="cache-control" content="no-cache">
+		<meta http-equiv="pragma" content="no-cache">
+		<meta http-equiv="expires" content="0">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<meta name="description" content="Smart Factory">
+		<meta name="author" content="FII - Software Team">
+		<title>Login</title>
+		<meta name="keywords" content="Clear login Form a Responsive Web Template, Bootstrap Web Templates, Flat Web Templates, Android Compatible Web Template, Smartphone Compatible Web Template, Free Webdesigns for Nokia, Samsung, LG, Sony Ericsson, Motorola Web Design">
+
+		<!-- <link rel="stylesheet" type="text/css" th:href="@{/assets/css/icons/fontawesome/styles.min.css}" >
+		<link rel="stylesheet" type="text/css" th:href="@{/assets/css/bootstrap.css}" >
+		<link rel="stylesheet" type="text/css" th:href="@{/assets/css/core.css}">
+		<link rel="stylesheet" type="text/css" th:href="@{/assets/css/components.css}">
+		<link rel="stylesheet" type="text/css" th:href="@{/assets/css/colors.css}">
+		<link rel="stylesheet" type="text/css" th:href="@{assets/css/icons/icomoon/styles.css}">
+		<link rel="stylesheet" type="text/css" th:href="@{assets/css/icons/fontawesome/styles.min.css}">
+
+		<script type="text/javascript" th:src="@{/assets/js/core/libraries/jquery.min.js}"></script>
+		<script type="text/javascript" th:src="@{/assets/js/core/libraries/bootstrap.min.js}"></script>
+		<script type="text/javascript" th:src="@{/assets/js/plugins/forms/selects/bootstrap_select.min.js}"></script>
+		<script type="text/javascript" th:src="@{/assets/js/custom/picker_date.js}"></script> -->
+
+		<!--//fonts-->
+    	<link rel="icon" type="image/ico" th:href="@{/favicon.ico}" >
+		<link id="codefund-style" rel="stylesheet" media="all" th:href="@{/assets/css/custom/code_fund_ad-781ed628.css}">
+
+		<link rel="stylesheet" type="text/css" th:href="@{/assets/css/custom/stylelogin.css}" >
+		<!-- <link th:href="@{/assets/css/custom/cssLogin.css}" rel="stylesheet"> -->
+
+		<!-- Font Awesome Icons -->
+		<link rel="stylesheet" type="text/css" th:href="@{/assets/assetss/plugins/fontawesome-free/css/all.min.css}">
+		<!-- overlayScrollbars -->
+		<link rel="stylesheet" th:href="@{/assets/assetss/plugins/overlayScrollbars/css/OverlayScrollbars.min.css}">
+		<!-- Theme style -->
+		<link rel="stylesheet" th:href="@{/assets/assetss/dist/css/adminlte.min.css}">
+		<!-- Tempusdominus Bbootstrap 4 -->
+		<link rel="stylesheet"
+			th:href="@{/assets/assetss/plugins/tempusdominus-bootstrap-4/css/tempusdominus-bootstrap-4.min.css}">
+		<!-- iCheck -->
+		<link rel="stylesheet" th:href="@{/assets/assetss/plugins/icheck-bootstrap/icheck-bootstrap.min.css}">
+		<!-- JQVMap -->
+		<!-- <link rel="stylesheet" th:href="@{/assets/assetss/plugins/jqvmap/jqvmap.min.css"> -->
+		<!-- overlayScrollbars -->
+		<link rel="stylesheet" th:href="@{/assets/assetss/plugins/overlayScrollbars/css/OverlayScrollbars.min.css}">
+		<!-- Daterange picker -->
+		<link rel="stylesheet" th:href="@{/assets/assetss/plugins/daterangepicker/daterangepicker.css}">
+		<!-- summernote -->
+		<link rel="stylesheet" th:href="@{/assets/assetss/plugins/summernote/summernote-bs4.css}">
+		<!-- Select2 -->
+		<link rel="stylesheet" th:href="@{/assets/assetss/plugins/select2/css/select2.min.css}">
+		<link rel="stylesheet" th:href="@{/assets/assetss/plugins/select2-bootstrap4-theme/select2-bootstrap4.min.css}">
+	
+		<!-- Custom -->
+		<link rel="stylesheet" th:href="@{/assets/assetss/css/custom/style.css}">
+
+		<!-- jQuery -->
+		<!-- <script th:src="@{/assets/assetss/plugins/jquery/jquery.min.js}"></script> -->
+		<script type="text/javascript" th:src="@{/assets/js/core/libraries/jquery.min.js}"></script>
+		<!-- jQuery UI 1.11.4 -->
+		<script th:src="@{/assets/assetss/plugins/jquery-ui/jquery-ui.min.js}"></script>
+		<!-- Resolve conflict in jQuery UI tooltip with Bootstrap tooltip -->
+		<script>
+			$.widget.bridge('uibutton', $.ui.button);
+		</script>
+		<!-- Bootstrap 4 -->
+		<script th:src="@{/assets/assetss/plugins/bootstrap/js/bootstrap.bundle.min.js}"></script>
+		<!-- daterangepicker -->
+		<script th:src="@{/assets/assetss/plugins/moment/moment.min.js}"></script>
+		<script th:src="@{/assets/assetss/plugins/daterangepicker/daterangepicker.js}"></script>
+		<!-- Tempusdominus Bootstrap 4 -->
+		<script th:src="@{/assets/assetss/plugins/tempusdominus-bootstrap-4/js/tempusdominus-bootstrap-4.min.js}"></script>
+		<!-- Summernote -->
+		<script th:src="@{/assets/assetss/plugins/summernote/summernote-bs4.min.js}"></script>
+		<!-- overlayScrollbars -->
+		<script th:src="@{/assets/assetss/plugins/overlayScrollbars/js/jquery.overlayScrollbars.min.js}"></script>
+		<!-- AdminLTE App -->
+		<script th:src="@{/assets/assetss/dist/js/adminlte.js}"></script>
+		<!-- OPTIONAL SCRIPTS -->
+		<script th:src="@{/assets/assetss/dist/js/demo.js}"></script>
+		<!-- jQuery UI -->
+		<script th:src="@{/assets/assetss/plugins/jquery-ui/jquery-ui.min.js}"></script>
+		<!-- Select2 -->
+		<script th:src="@{/assets/assetss/plugins/select2/js/select2.full.min.js}"></script>
+		<!-- PAGE PLUGINS -->
+
+		<!-- bs-custom-file-input -->
+		<script th:src="@{/assets/assetss/plugins/bs-custom-file-input/bs-custom-file-input.min.js}"></script>
+
+		<script th:src="@{/assets/js/mobile/icivet.min.js}"></script>
+		<script th:src="@{/assets/assetss/js/custom/common.js}"></script>
+	
+		<!--//fonts-->
+		<!-- <link id="codefund-style" rel="stylesheet" media="all" th:href="@{/assets/assetss/css/custom/template-login.css}"> -->
+		<!-- <link rel="stylesheet" type="text/css" th:href="@{/assets/assetss/css/custom/login.css}" > -->
+	</head>
+	<body>
+		<div id="loader"></div>
+	<!-- Global site tag (gtag.js) - Google Analytics -->
+		<div id="wrapper">
+			<header>
+				<meta name="robots" content="noindex">
+				<h1 class="text-white" th:text="#{login.smartfactory}"></h1>
+			</header>
+			<div id="content">
+				<div class="w3ls-login box box--big form-css-login">
+					<!-- form starts here -->
+					<form th:action="@{/login}" method="post" id="idFormLogin">
+						<h4 class="login-title" th:text="#{login.title}"></h4>
+						<h5 style="text-align: center; width: 100%; color: #e83939" th:text="${error}"></h5>
+						<div class="agile-field-txt">
+							<label>
+								<i class="fa fa-user" aria-hidden="true"></i> <span th:text="#{login.user}"></span>
+							</label>
+							<input type='text' value="" name="username" id="inputUser" placeholder="Enter your username " required="">
+						</div>
+						<div class="agile-field-txt" style="position: relative;">
+							<label>
+								<i class="fa fa-key" aria-hidden="true"></i> <span th:text="#{login.password}"></span>
+							</label>
+							<input type="password" name="password" id="inputPassword" placeholder="Enter your password " required="">
+							<span class="btnShowPass"><i class="fas fa-eye" aria-hidden="true"></i></span>
+						</div>
+						<div class="agile-field-txt">
+							<label>
+								<i class="fa fa-globe" aria-hidden="true"></i> <span th:text="#{login.language}"></span>
+							</label>
+							<select class="form-control select-language" name="lang" id="language" style="height: 37px;">
+								<option value="en-US" th:text="#{login.language.English}"></option>
+								<option value="zh-TW" th:text="#{login.language.ChinesePT}"></option>
+								<option value="zh-CN" th:text="#{login.language.ChineseGT}"></option>
+								<option value="vi-VN" th:text="#{login.language.vietnamese}"></option>
+							</select>
+						</div>
+						<!-- <div class="agile-field-txt">
+							<label for="showPassword"><i class="fas fa-eye" aria-hidden="true"></i>Show Password</label>
+							<div class="custom-control custom-checkbox float-left ml-2">
+								<input class="custom-control-input" type="checkbox" id="showPassword">
+								<label for="showPassword" class="custom-control-label"></label>
+							</div>
+						</div> -->
+						<div class="w3ls-bot">
+							<div class="form-end">
+								<!-- <input type="submit" id="idLogin" class="btn submitButton" value="Login" style="margin-bottom: 8px;"> -->
+								<button id="idLogin" class="submitButton btn-primary"  type="submit">Login</button>
+								<button id="idLoginSSO" class="submitButton btn-primary" onclick="loginWithSSO()" type="button">Login <br/> Smart Office</button>
+								<button id="idLoginIcivet" class="submitButton btn-primary" onclick="loginWithIcivet()">Login <br/> Icivet</button>
+							</div>
+							<div class="form-end">
+								<!-- <input type="submit" id="idLogin" class="btn submitButton" value="Login" style="margin-bottom: 8px;"> -->
+
+							</div>
+							<!-- <div class="clearfix"></div> -->
+						</div>
+						<div class="agile-field-txt m-0">
+							<div class="class-wrapSignUp row">
+								<div class="col-md-6">
+<!--									<a class="class-forgetPass" href="#" data-toggle="modal" data-target="#modal-reset-password" th:text="#{login.forgetPass}"></a>-->
+									<a class="class-forgetPass" href="#" data-toggle="modal" data-target="#modal-reset-password" th:text="#{login.resetPassword}"></a>
+								</div>
+								<div class="col-md-6">
+									<a th:href="@{/register}" class="class-signUp" th:text="#{login.dontAccount}">
+									</a>
+								</div>
+							</div>
+							<div class="class-wrapSignUp row mt-1">
+								<div class="col-md-6">
+									<a th:href="@{/change-password}" class="class-changePass" th:text="#{login.changePassword}">
+									</a>
+								</div>
+								<div class="col-md-6" style="text-align: right;">
+									<a class="class-forgetPass" href="#" data-toggle="modal" data-target="#modal-unlockAccount" th:text="#{login.unlockAccount}">
+									</a>
+								</div>
+							</div>
+						</div>
+					</form>
+				</div>
+			</div>
+			<footer>
+				<p class="copyright-agileinfo">© 2018. <a th:href="@{#}" target="_blank">FII </a>by
+					<a th:href="@{#}" target="_blank">Software Team </a>cpe-vn-fii-sw@mail.foxconn.com
+				</p>
+			</footer>
+		</div>
+	<!-- modal -->
+	<div class="modal fade" id="modal-forgotPass" role="dialog">
+		<div class="modal-dialog mt-5">
+			<div class="modal-content">
+				<div class="modal-header">
+					<div class="modal-title">
+						<span>Forget Password</span> 
+					</div>
+					<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button>
+				</div>
+				<div class="modal-body">
+					<!-- <p style="padding: 0;color: #000;font-size: 13px;"><i class="fa fa-info-circle" aria-hidden="true"></i> You can call to telephone 26152 or send email to address: cpe-vn-fii-sw@mail.foxconn.com to reset password. Thank you so much!!</p> -->
+					<div class="form-group mb-3 row">
+						<span class="col-sm-4 pt-2" for="txtUserName">User Name: </span>
+						<input type="text" class="col-sm-8 form-control" id="txtUserName" placeholder="Enter your user name">
+					</div>
+					<div class="form-group row row_before">
+						<span class="col-sm-4 pt-2" for="slDefaultValue">Send OTP To: </span>
+						<select id="slDefaultValue" class="col-sm-8 form-control">
+							<option value="INDIVIDUAL" selected>Individual</option>
+							<option value="ASSISTANT">Assistant</option>
+							<option value="MANAGER">Manager</option>
+						</select>
+					</div>
+
+					<div id="row_mail_to" class="form-group row row_before"></div>
+
+					<div class="form-group row row_affter d-none">
+						<span class="col-sm-4 pt-2" for="txtOTP">OTP: </span>
+						<input type="number" class="col-sm-8 form-control" id="txtOTP" placeholder="******">
+					</div>
+					<div class="form-group mb-3 row row_affter d-none">
+						<span class="col-sm-4 pt-2" for="txtNewPassword">New Password: </span>
+						<input type="password" class="col-sm-8 form-control" id="txtNewPassword" placeholder="Enter new password">
+						<span class="col-sm-4 pt-2 checkpass d-none" id="textAlert"><span style="color: #6c757d;">Empty</span></span>
+						<div class="col-sm-8 pt-2 checkpass d-none">
+							<div class="progress">
+								<div class="progress-bar" role="progressbar p-gray" aria-volumenow="0" aria-volumemin="0" aria-volumemax="100" style="width: 0%"></div>
+							</div>
+						</div>
+					</div>
+					<div class="form-group mb-3 row row_affter d-none">
+						<span class="col-sm-4 pt-2" for="txtRePassword">Confirm Password: </span>
+						<input type="password" class="col-sm-8 form-control" id="txtRePassword" placeholder="Confirm new password">
+					</div>
+				</div>
+				<div class="modal-footer">
+					<button id="btnSendOTP" class="btn btn-sm btn-success mr-2" onclick="sendOTP()">Send OTP</button>
+					<button id="btnResetPass" class="btn btn-sm btn-success mr-2 d-none" onclick="forgotPassword()">Submit</button>
+					<button id="btnCancelReset" class="btn btn-sm btn-danger">Cancel</button>
+				</div>
+			</div>
+		</div>
+	</div>
+
+		<!-- modal reset-password-->
+		<div class="modal fade" id="modal-reset-password" role="dialog">
+			<div class="modal-dialog mt-5">
+				<div class="modal-content">
+					<div class="modal-header">
+						<div class="modal-title">
+							<span th:text="#{login.resetPassword}"></span>
+						</div>
+						<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button>
+					</div>
+					<div class="modal-body">
+						<!-- <p style="padding: 0;color: #000;font-size: 13px;"><i class="fa fa-info-circle" aria-hidden="true"></i> You can call to telephone 26152 or send email to address: cpe-vn-fii-sw@mail.foxconn.com to reset password. Thank you so much!!</p> -->
+						<div class="form-group mb-3 row">
+							<span class="col-sm-4 pt-2" for="txtUserNameReset">User Name: </span>
+							<input type="text" class="col-sm-8 form-control" id="txtUserNameReset" placeholder="Enter your user name">
+						</div>
+						<div class="form-group row">
+							<span class="col-sm-4 pt-2" for="txtIdNo">CMND/CCCD: </span>
+							<input type="number" class="col-sm-8 form-control" id="txtIdNo" placeholder="Enter your identification ID">
+						</div>
+					</div>
+					<div class="modal-footer">
+						<button class="btn btn-sm btn-success mr-2" onclick="resetPassword()">Submit</button>
+						<button class="btn btn-sm btn-danger">Cancel</button>
+					</div>
+				</div>
+			</div>
+		</div>
+
+	<div class="modal fade" id="modal-unlockAccount" role="dialog">
+		<div class="modal-dialog mt-5">
+			<div class="modal-content">
+				<div class="modal-header">
+					<div class="modal-title">
+						<span>Unlock Account</span> 
+					</div>
+					<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button>
+				</div>
+				<div class="modal-body">
+					<div class="form-group mb-3 row">
+						<span class="col-sm-4 pt-2" for="txt">User Name: </span>
+						<input type="text" class="col-sm-8 form-control" id="txtUserNameUnlock" placeholder="Enter your user name">
+					</div>
+					<div class="form-group row row_before">
+						<span class="col-sm-4 pt-2" for="txt">Send OTP To: </span>
+						<select id="slDefaultValueUnlock" class="col-sm-8 form-control">
+							<option value="INDIVIDUAL">Individual</option>
+							<option value="ASSISTANT">Assistant</option>
+							<option value="MANAGER">Manager</option>
+						</select>
+					</div>
+					<div class="form-group row row_affter d-none">
+						<span class="col-sm-4 pt-2" for="txt">OTP: </span>
+						<input type="text" class="col-sm-8 form-control" id="txtOTPUnlock" placeholder="******">
+					</div>
+				</div>
+				<div class="modal-footer">
+					<button id="btnSendOTPUnlock" class="btn btn-sm btn-success mr-2" onclick="sendOTPUnlock()">Send OTP</button>
+					<button id="btnUnlock" class="btn btn-sm btn-success mr-2 d-none" onclick="unlockAccount()">Submit</button>
+					<button class="btn btn-sm btn-danger" data-dismiss="modal">Cancel</button>
+				</div>
+			</div>
+		</div>
+	</div>
+<script th:inline="javascript">
+	function loginWithIcivet() {
+		window.location.href = /*[[${loginIcivetUrl}]]*/ "#";
+	}
+
+	function loginWithSSO() {
+		window.location.href = /*[[${loginSsoUrl}]]*/ "#";
+	}
+
+	$('.btnShowPass').on('click', function() {
+		if($(this).hasClass('show')) {
+			$(this).removeClass('show');
+			$('#inputPassword').attr('type', 'password');
+		} else {
+			$(this).addClass('show');
+			$('#inputPassword').attr('type', 'text');
+		}
+	});
+
+	$('#txtUserName').on('change', function() {
+		checkMail();
+	});
+	$('#slDefaultValue').on('change', function() {
+		checkMail();
+	});
+
+	function checkMail() {
+		$('.loader').removeClass('d-none');
+		var userName = $('#txtUserName').val();
+		var grantType = $('#slDefaultValue').val();
+		$.ajax({
+            type: 'GET',
+            url: '/oauth-service/api/user/get-email',
+            data: {
+                username: userName,
+				grantType: grantType
+            },
+            contentType: "application/json; charset=utf-8",
+            success: function (res) {
+                if (res.code == "SUCCESS") {
+                	if(res.result == null && grantType == 'INDIVIDUAL') {
+                		var html = '<span class="col-sm-4 pt-2" for="txtMailOTP">Your Email: </span>'
+							 	 + '<input type="text" class="col-sm-8 form-control" id="txtMailOTP" placeholder="Enter your mail">';
+						$('#row_mail_to').html(html);
+					} else {
+						$('#row_mail_to').html('<span class="col-sm-12 pt-2">OTP Will Be Sent To Email: ' + (res.result != null ? res.result : "") + '</span>');
+					}
+                } else {
+                    alert(res.message);
+                    $('#row_mail_to').html('');
+                }
+            },
+            error: function (res) {
+                alert(res.responseJSON.message);
+                $('#row_mail_to').html('');
+            },
+            complete: function () {
+                $('.loader').addClass('d-none');
+            }
+        });
+	}
+
+	$('#btnCancelReset').on('click', function() {
+		$('#txtUserName').removeAttr('disabled');
+		$('.row_before').removeClass('d-none');
+		$('.row_affter').addClass('d-none');
+		$('#btnSendOTP').removeClass('d-none');
+		$('#btnResetPass').addClass('d-none');
+	});
+
+	function sendOTP() {
+		$('.loader').removeClass('d-none');
+		var userName = $('#txtUserName').val();
+		var defaultValue = $('#slDefaultValue').val();
+		$.ajax({
+            type: 'GET',
+            url: '/oauth-service/api/user/forgot-password',
+            data: {
+                username: userName,
+				defaultValue: defaultValue
+            },
+            contentType: "application/json; charset=utf-8",
+            success: function (res) {
+                if (res.code == "SUCCESS") {
+					$('#txtUserName').attr('disabled', 'disabled');
+                    $('.row_before').addClass('d-none');
+                    $('.row_affter').removeClass('d-none');
+					$('#btnSendOTP').addClass('d-none');
+					$('#btnResetPass').removeClass('d-none');
+                } else {
+                    alert(res.message);
+                }
+            },
+            error: function (res) {
+                alert(res.responseJSON.message);
+            },
+            complete: function () {
+                $('.loader').addClass('d-none');
+            }
+        });
+	}
+
+
+	var strengthbar = document.getElementById("meter");
+	$("#txtNewPassword").on("keyup", function() {
+		checkPassword(this.value);
+		$('.checkpass').removeClass('d-none');
+	});
+
+	function checkPassword(password) {
+		var strength = 0;
+		if(password.match(/[a-z]+/)) {
+			strength += 1;
+		}
+		if(password.match(/[A-Z]+/)) {
+			strength += 1;
+		}
+		if(password.match(/[0-9]+/)) {
+			strength += 1;
+		}
+		if(password.match(/[!@#$%^&*()-_=+.,;'":?]+/)) {
+			strength += 1;
+		}
+		if(password.length > 8) {
+			strength += 1;
+		}
+
+		switch(strength) {
+			case 0:
+				$('.progress').html('<div class="progress-bar p-gray" role="progressbar" aria-volumenow="0" aria-volumemin="0" aria-volumemax="100" style="width: 0%"></div>');
+				$('#textAlert').html('<span style="color: #6c757d;">Empty</span>');
+				break;
+			case 1:
+				$('.progress').html('<div class="progress-bar p-danger" role="progressbar" aria-volumenow="20" aria-volumemin="0" aria-volumemax="100" style="width: 20%"></div>');
+				$('#textAlert').html('<span style="color: #dc3545;">Very Weak</span>');
+				break;
+			case 2:
+				$('.progress').html('<div class="progress-bar p-warning" role="progressbar" aria-volumenow="40" aria-volumemin="0" aria-volumemax="100" style="width: 40%"></div>');
+				$('#textAlert').html('<span style="color: #fd7e14;">Weak</span>');
+				break;
+			case 3:
+				$('.progress').html('<div class="progress-bar p-yellow" role="progressbar" aria-volumenow="60" aria-volumemin="0" aria-volumemax="100" style="width: 60%"></div>');
+				$('#textAlert').html('<span style="color: #ffc107;">Medium</span>');
+				break;
+			case 4:
+				$('.progress').html('<div class="progress-bar p-primary" role="progressbar" aria-volumenow="80" aria-volumemin="0" aria-volumemax="100" style="width: 80%"></div>');
+				$('#textAlert').html('<span style="color: #007bff;">Strong</span>');
+				break;
+			case 5:
+				$('.progress').html('<div class="progress-bar p-success" role="progressbar" aria-volumenow="100" aria-volumemin="0" aria-volumemax="100" style="width: 100%"></div>');
+				$('#textAlert').html('<span style="color: #28a745;">Very Strong</span>');
+				break;
+		}
+	}
+
+
+	function forgotPassword() {
+		$('.loader').removeClass('d-none');
+		var password = $('#txtNewPassword').val();
+		var confirm = $('#txtRePassword').val();
+		if(password == confirm) {
+			var form = new FormData();
+			form.append('username', $('#txtUserName').val());
+			form.append('password', $('#txtNewPassword').val());
+			form.append('otp', Number($('#txtOTP').val()));
+			$.ajax({
+				type: 'POST',
+				url: '/oauth-service/api/user/forgot-password',
+				data: form,
+				processData: false,
+				contentType: false,
+				mimeType: "multipart/form-data",
+				success: function (result) {
+					var res = JSON.parse(result);
+					if (res.code == "SUCCESS") {
+						alert('Your Password has been changed!');
+						$('#modal-forgotPass').modal('hide');
+					} else {
+						alert(res.message);
+					}
+				},
+				error: function (res) {
+					alert(res.responseJSON.message);
+				},
+				complete: function () {
+					$('.loader').addClass('d-none');
+				}
+			});
+		} else {
+			alert("Confirm Password is not correct!!");
+		}
+	}
+
+	function sendOTPUnlock() {
+		$('.loader').removeClass('d-none');
+		var userName = $('#txtUserNameUnlock').val();
+		var defaultValue = $('#slDefaultValueUnlock').val();
+		$.ajax({
+            type: 'GET',
+            url: '/oauth-service/api/user/unlock-account',
+            data: {
+                username: userName,
+				defaultValue: defaultValue
+            },
+            contentType: "application/json; charset=utf-8",
+            success: function (res) {
+                if (res.code == "SUCCESS") {
+					$('#txtUserNameUnlock').attr('disabled', 'disabled');
+                    $('.row_before').addClass('d-none');
+                    $('.row_affter').removeClass('d-none');
+					$('#btnSendOTPUnlock').addClass('d-none');
+					$('#btnUnlock').removeClass('d-none');
+                } else {
+                    alert(res.message);
+                }
+            },
+            error: function (res) {
+				alert(res.responseJSON.message);
+            },
+            complete: function () {
+                $('.loader').addClass('d-none');
+            }
+        });
+	}
+
+	function unlockAccount() {
+		$('.loader').removeClass('d-none');
+		var form = new FormData();
+		form.append('username', $('#txtUserNameUnlock').val());
+		form.append('otp', Number($('#txtOTPUnlock').val()));
+		$.ajax({
+            type: 'POST',
+            url: '/oauth-service/api/user/unlock-account',
+			data: form,
+            processData: false,
+			contentType: false,
+			mimeType: "multipart/form-data",
+            success: function (result) {
+				var res = JSON.parse(result);
+                if (res.code == "SUCCESS") {
+                    alert('Account has been Unlocked!');
+					$('#modal-unlockAccount').modal('hide');
+                } else {
+					alert(res.message);
+                }
+            },
+            error: function (res) {
+				alert(res.responseJSON.message);
+            },
+            complete: function () {
+                $('.loader').addClass('d-none');
+            }
+        });
+	}
+
+	function resetPassword() {
+		$('.loader').removeClass('d-none');
+		var form = new FormData();
+		form.append('username', $('#txtUserNameReset').val());
+		form.append('identityNo', $('#txtIdNo').val());
+		$.ajax({
+			type: 'POST',
+			url: '/oauth-service/api/user/reset-password',
+			data: form,
+			processData: false,
+			contentType: false,
+			mimeType: "multipart/form-data",
+			success: function (result) {
+				var res = JSON.parse(result);
+				if (res.code == "SUCCESS") {
+					alert('Your Password has been reset to Foxconn168!!');
+					$('#modal-reset-password').modal('hide');
+				} else {
+					alert(res.message);
+				}
+			},
+			error: function (res) {
+				var responsive = JSON.parse(res.responseText);
+				alert(responsive.message);
+			},
+			complete: function () {
+				$('.loader').addClass('d-none');
+			}
+		});
+	}
+
+	$(document).ready(function() {
+		$('select[name=lang]').on('change', function() {
+			document.cookie = ("lang="+this.value)+";path=/";
+			window.localStorage.setItem('lang', this.value);
+			location.reload();
+		});
+
+		var lang = window.localStorage.getItem('lang');
+		if (lang != undefined) {
+			$('select[name=lang]').val(lang);
+			//$('select[name=lang]').selectpicker('refresh');
+		} else {
+			document.cookie = ("lang=en-US;path=/");
+			window.localStorage.setItem('lang', 'en-US');
+		}
+
+		//$('.row_before').addClass('d-none');
+		//$('.row_affter').removeClass('d-none');
+	});
+
+	$(window).load(function() {
+		$('#idFormLogin').submit(function(e){
+			document.getElementById('loader').style.display='block';
+			setTimeout(function(){
+				document.getElementById('loader').style.display='none';
+			}, 30000);
+		});
+	});
+</script>
+</body><loom-container id="lo-engage-ext-container"><div></div><loom-shadow classname="resolved"></loom-shadow></loom-container>
+</html>
